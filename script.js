@@ -2,16 +2,16 @@ console.log('Hello from Nerdbord!')
 function changeColor(color,elem){
     elem.style['border-color']=color;
 }
-let box = document.querySelector('.box');
-let colors = ['red','magenta','orange','blue'];
-let position = 0;
+const box = document.querySelector('.box');
+const colors = ['red','magenta','orange','blue'];
+let colorIndex = 0;
 window.setInterval(function(){
-        changeColor(colors[position],box);
-        if(position>3){
-            position=0;
+        changeColor(colors[colorIndex],box);
+        if(colorIndex>3){
+            colorIndex=0;
         }
         else{
-            position++
+            colorIndex++
         }
     }
     ,3000);
